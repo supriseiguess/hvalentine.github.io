@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const pages = document.querySelectorAll(".pages"); // Select all pages
+    const pages = Array.from(document.querySelectorAll(".pages")); // Select all pages
     const nextButton = document.getElementById("button-f");
     const prevButton = document.getElementById("button-b");
     const restartButton = document.createElement("button");
