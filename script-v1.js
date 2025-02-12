@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const prevButton = document.getElementById("button-b");
     const restartButton = document.createElement("button");
 
-    restartButton.textContent = "Restart";
+    restartButton.textContent = "Read again";
     restartButton.id = "button-r";
     restartButton.style.display = "none"; // Hide it initially
     document.querySelector("main").appendChild(restartButton); // Add to the DOM
