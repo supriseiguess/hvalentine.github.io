@@ -1,0 +1,132 @@
+/* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #afbadf;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: myfont, sans-serif;
+}
+
+@font-face {
+    font-family: myfont;
+    src: url(/Resources/Helvetica-Bold.ttf);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+h1 {
+    font-weight: bolder;
+    font-size: 8vw; /* Responsive text scaling */
+    margin-bottom: 10px;
+    color: #003366;
+    text-align: center;
+}
+
+/* Book container adjustments */
+.bookContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 95vw;
+    height: 65vh;
+    max-height: 70vh;
+    overflow: hidden;
+}
+
+.pages {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+/* Button container styling */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+    width: 100%;
+    flex-wrap: wrap; /* Ensures buttons adjust on small screens */
+}
+
+/* Button styling */
+button {
+    padding: 10px 15px;
+    font-size: 5vw; /* Responsive button text */
+    cursor: pointer;
+    border: none;
+    background: #4a5cb5;
+    color: white;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.1s ease;
+    min-width: 40%; /* Ensures buttons are big enough to tap */
+}
+
+button:hover {
+    background: #3b4a9d;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Responsive Design: Adjustments for Larger Screens */
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 3vw;
+    }
+    .bookContainer {
+        width: 80vw;
+        height: 70vh;
+    }
+    button {
+        font-size: 2vw;
+        min-width: 30%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    h1 {
+        font-size: 2.5vw;
+    }
+    .bookContainer {
+        width: 60vw;
+        height: 65vh;
+    }
+    .buttons-container {
+        gap: 20px;
+    }
+    button {
+        font-size: 1.5vw;
+        min-width: 20%;
+    }
+}
