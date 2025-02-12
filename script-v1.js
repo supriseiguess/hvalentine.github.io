@@ -12,12 +12,15 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentIndex = 0; // Track current page index
 
     // Function to show the current page
-    function showPage(index) {
-        pages.forEach((page, i) => {
-            page.classList.toggle("show", i === index);
-            page.classList.toggle("hide", i !== index);
-        });
-    }
+function showPage(index) {
+    pages.forEach((page, i) => {
+        if (i === index) {
+            page.style.display = "block";  // Show the active page
+        } else {
+            page.style.display = "none";   // Hide others
+        }
+    });
+}
 
     // Show restart button when last page is reached
     function checkForRestart() {
