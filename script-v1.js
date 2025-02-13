@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Restart button (Restart the book)
     restartButton.addEventListener("click", () => {
-        message.textContent = "Reading again, huh? I'm glad you liked this 🤗❤️";
+        message.textContent = "Reading again, huh? I'm glad you liked this,huge hug for you 🤗❤️";
         message.style.display = "block";
         setTimeout(() => {
             message.style.opacity = "1"; // Fade in
